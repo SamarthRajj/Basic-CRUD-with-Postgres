@@ -6,7 +6,7 @@ export const getAllUsers = async (req,res) => {
         res.status(200).json(results.rows);
     }
     catch (err) {
-        console.log(err);
+        console.log(err);   
     }
 }
 export const getAllUsersById = async (req,res) => {
@@ -65,7 +65,7 @@ export const updateUserById = async (req,res) => {
         else{
             await pool.query(updateUserByIdQuery,[id,name,email,age,dob]);
             res.status(200).send("User updated succesfully");
-        }
+        } 
         
     
         
